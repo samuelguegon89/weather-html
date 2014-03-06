@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC '-// W3C // DTD XHTML 1.0 Strict //EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml"xml:lang="es">
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1>El Tiempo en Andalucia</h1>
+		{% set contador=0 %}
+		{% for provincia in provincias %}
+		<h2><b>{{ provincia }}</b></h2>
+		<ul>
+			<li>Temperatura max:{{ temperatura_max[contador] }}</li>
+			<li>Temperatura min:{{ temperatura_min[contador] }}</li>
+			<li>Viento:{{ velocidad_viento[contador] }} Km/h, Direccion: {{ direccion[contador] }}</li>
+		</ul>	
+		{% set contador = contador + 1 %}
+		{% endfor %}
+	</body>
+</html>
+
